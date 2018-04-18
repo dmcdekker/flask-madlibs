@@ -6,8 +6,16 @@
     <form action="/madlib">
         Full Name: <input type="text" name="person"><br>
         Color: <input type="text" name="color"><br>
+        Number: <input type="text" name="number"><br>
         Noun: <input type="text" name="noun"><br>
-        Adjective: <input type="text" name="adjective"><br>
+        Compliments:
+        <select name="comp_type">
+            {% for item in compliments %}
+
+            <option value="item">{{ item }}</option>
+            {% endfor %}
+        </select>
+
         <input type="submit"> 
     </form>
 </body>
